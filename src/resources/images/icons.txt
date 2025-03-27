@@ -1,0 +1,8 @@
+Icônes nécessaires :
+1. plane-icon.png - Icône d'avion pour l'onglet Vols
+2. booking-icon.png - Icône de réservation pour l'onglet Réservations
+3. passenger-icon.png - Icône de passager pour l'onglet Passagers
+4. refresh-icon.png - Icône d'actualisation pour le bouton Actualiser
+5. help-icon.png - Icône d'aide pour le bouton Aide
+
+Note: Ces icônes doivent être placées dans le dossier src/resources/images/ 
