@@ -1,0 +1,16 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Objectif général du projet}{3}{section.1}%
+\contentsline {section}{\numberline {2}Description des fonctionnalités}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Interface utilisateur intuitive}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Simulation de vol}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Environnement dynamique}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Gestion du trafic aérien}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Planification de vol}{3}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Système de mission}{4}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Personnalisation}{4}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Accessibilité}{4}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Interfaces utilisateur envisagées}{4}{section.3}%
+\contentsline {section}{\numberline {4}Cas d'usage}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Scénario 1 : Vol libre}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Scénario 2 : Mission guidée}{5}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Annexe : Points techniques à considérer}{5}{section.5}%

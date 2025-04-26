@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{fontawesome}
+
+\geometry{a4paper, margin=2.5cm}
+
+% Fix the header height
+\setlength{\headheight}{16.35004pt}
+\addtolength{\topmargin}{-0.996pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=12pt]{n7.png}}
+\fancyhead[C]{Manuel Utilisateur}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{Simulateur d'Avion - 2025}
+
+% Configuration des boîtes colorées
+\tcbset{
+    note/.style={
+        colback=blue!5,
+        colframe=blue!75!black,
+        fonttitle=\bfseries,
+        title=Note:
+    },
+    warning/.style={
+        colback=red!5,
+        colframe=red!75!black,
+        fonttitle=\bfseries,
+        title=Attention:
+    },
+    tip/.style={
+        colback=green!5,
+        colframe=green!75!black,
+        fonttitle=\bfseries,
+        title=Astuce:
+    }
+}
+
+\title{
+    \includegraphics[width=0.4\textwidth]{n7.png}\\[1cm]
+    \Huge\textbf{Manuel Utilisateur}\\[0.5cm]
+    \Large\textbf{Simulateur d'Avion}\\[0.5cm]
+    \large Version 1.0
+}
+\author{ASSKNID Walid - Équipe KL-4}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Ce manuel vous guidera dans l'utilisation du simulateur d'avion. Il vous permettra de comprendre les fonctionnalités de base et avancées du logiciel.
+
+\section{Configuration requise}
+\begin{itemize}
+    \item Java Runtime Environment (JRE) 11 ou supérieur
+    \item Système d'exploitation : Windows, Linux ou MacOS
+    \item Mémoire RAM : 4 Go minimum
+    \item Résolution d'écran minimale : 1280x720
+    \item Souris et clavier
+\end{itemize}
+
+\section{Installation}
+\begin{enumerate}
+    \item Téléchargez le fichier \texttt{simulateur-avion.jar}
+    \item Double-cliquez sur le fichier pour lancer l'application
+    \item Alternativement, vous pouvez lancer l'application en ligne de commande :
+    \begin{verbatim}
+    java -jar simulateur-avion.jar
+    \end{verbatim}
+\end{enumerate}
+
+\begin{tcolorbox}[note]
+Assurez-vous que Java est correctement installé sur votre système avant de lancer l'application.
+\end{tcolorbox}
+
+\section{Interface principale}
+
+\subsection{Menu principal}
+Le menu principal propose les options suivantes :
+\begin{itemize}
+    \item \textbf{Nouvelle simulation} : Démarre une nouvelle session
+    \item \textbf{Quitter} : Ferme l'application
+\end{itemize}
+
+\subsection{Interface de simulation}
+L'interface de simulation comprend :
+\begin{itemize}
+    \item Zone de visualisation principale
+    \item Panneau de contrôle (gauche)
+    \item Informations de vol (droite)
+    \item Barre d'état (bas)
+\end{itemize}
+
+\section{Contrôles de base}
+
+\subsection{Contrôle de la vue}
+\begin{itemize}
+    \item \textbf{Souris} : 
+    \begin{itemize}
+        \item Clic gauche : Sélectionner un avion
+        \item Clic droit : Menu contextuel
+        \item Molette : Zoom avant/arrière
+    \end{itemize}
+    \item \textbf{Clavier} :
+    \begin{itemize}
+        \item Flèches : Déplacer la vue
+        \item + / - : Zoom avant/arrière
+        \item Espace : Centrer la vue
+    \end{itemize}
+\end{itemize}
+
+\subsection{Contrôle des avions}
+Pour un avion sélectionné :
+\begin{itemize}
+    \item \textbf{W/S} : Augmenter/Diminuer la vitesse
+    \item \textbf{A/D} : Tourner à gauche/droite
+    \item \textbf{Q/E} : Monter/Descendre
+    \item \textbf{B} : Freins
+    \item \textbf{G} : Train d'atterrissage
+\end{itemize}
+
+\begin{tcolorbox}[tip]
+Utilisez la touche Tab pour basculer entre les différents avions en vol.
+\end{tcolorbox}
+
+\section{Fonctionnalités avancées}
+
+\subsection{Gestion du trafic aérien}
+\begin{itemize}
+    \item Sélection multiple d'avions
+    \item Gestion des priorités
+    \item Résolution automatique des conflits
+\end{itemize}
+
+\subsection{Conditions météorologiques}
+Le simulateur prend en compte :
+\begin{itemize}
+    \item Direction et force du vent
+    \item Visibilité
+    \item Précipitations
+\end{itemize}
+
+\begin{tcolorbox}[warning]
+Les conditions météorologiques affectent significativement le comportement des avions.
+\end{tcolorbox}
+
+\section{Dépannage}
+
+\subsection{Problèmes courants}
+\begin{itemize}
+    \item \textbf{L'application ne démarre pas} :
+    \begin{itemize}
+        \item Vérifiez votre version de Java
+        \item Essayez de lancer en ligne de commande pour voir les messages d'erreur
+    \end{itemize}
+    \item \textbf{Performances faibles} :
+    \begin{itemize}
+        \item Réduisez le nombre d'avions simultanés
+        \item Diminuez la qualité graphique
+        \item Fermez les applications en arrière-plan
+    \end{itemize}
+\end{itemize}
+
+\end{document} 

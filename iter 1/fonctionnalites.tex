@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\geometry{a4paper, margin=2.5cm}
+
+% Fix the header height warning
+\setlength{\headheight}{15.35403pt}
+\addtolength{\topmargin}{-3.35403pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=12pt]{n7.png}}
+\fancyhead[C]{Équipe KL-4}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{Simulateur d'Avion - 2025}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Fonctionnalités du Simulateur d'Avion},
+    pdfauthor={Équipe KL-4}
+}
+
+\title{
+    \includegraphics[width=0.4\textwidth]{n7.png}\\[1cm]
+    \Huge\textbf{Fonctionnalités du Simulateur d'Avion}
+}
+\author{
+    \Large\textbf{Équipe KL-4}\\[2ex]
+    \large
+    ASSKNID Walid\\
+    ACHAGUI Aymen\\
+    EL AOUNI Youssef\\
+    EL GUEDDARI Yahya\\
+    HARAKA Hiba\\
+    NASMANE Abdelhak
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Objectif général du projet}
+Le projet vise à développer un simulateur d'avion permettant aux utilisateurs de contrôler des aéronefs dans un environnement virtuel. L'application offrira une expérience immersive avec des fonctionnalités réalistes de pilotage et de gestion du trafic aérien. Le simulateur sera conçu pour être à la fois éducatif et divertissant, offrant différents niveaux de complexité pour s'adapter aux besoins des utilisateurs.
+
+\section{Description des fonctionnalités}
+
+\subsection{Interface utilisateur intuitive}
+\begin{itemize}
+    \item Menu principal avec options de démarrage et paramètres
+    \item Interface de simulation claire et informative
+    \item Tableau de bord personnalisable affichant les informations essentielles
+    \item Mode plein écran pour une immersion maximale
+\end{itemize}
+
+\subsection{Simulation de vol}
+\begin{itemize}
+    \item Contrôle réaliste des avions (accélération, décélération, rotation, montée, descente)
+    \item Physique de vol réaliste (portance, traînée, effets météorologiques)
+    \item Différents types d'aéronefs avec des caractéristiques uniques
+    \item Système de caméra flexible (vue cockpit, vue externe, vue stratégique)
+\end{itemize}
+
+\subsection{Environnement dynamique}
+\begin{itemize}
+    \item Conditions météorologiques variables (ensoleillé, nuageux, pluvieux, orageux)
+    \item Effets de jour et de nuit avec éclairage dynamique
+    \item Système de nuages réalistes
+    \item Terrain détaillé avec reliefs, villes et points d'intérêt
+\end{itemize}
+
+\subsection{Gestion du trafic aérien}
+\begin{itemize}
+    \item Simulation de plusieurs avions simultanément
+    \item Système de collision et d'évitement
+    \item Aide à la navigation et au positionnement
+    \item Communication avec la tour de contrôle (simulée)
+\end{itemize}
+
+\subsection{Planification de vol}
+\begin{itemize}
+    \item Création et modification d'itinéraires
+    \item Définition de points de passage (waypoints)
+    \item Calcul automatique des temps de vol et de la consommation de carburant
+    \item Sauvegarde et chargement de plans de vol
+\end{itemize}
+
+\subsection{Système de mission}
+\begin{itemize}
+    \item Missions prédéfinies avec objectifs variés
+    \item Système de score et de progression
+    \item Défis à accomplir
+    \item Mode libre pour la pratique sans contraintes
+\end{itemize}
+
+\subsection{Personnalisation}
+\begin{itemize}
+    \item Personnalisation de l'apparence des avions
+    \item Ajustement des paramètres de simulation
+    \item Création de scénarios personnalisés
+    \item Configuration des contrôles
+\end{itemize}
+
+\subsection{Accessibilité}
+\begin{itemize}
+    \item Interface adaptée aux différents niveaux d'expérience
+    \item Options d'assistance pour les débutants
+    \item Support de différents périphériques de contrôle (clavier, souris, manette, joystick)
+    \item Paramètres de difficulté ajustables
+\end{itemize}
+
+\section{Interfaces utilisateur envisagées}
+\begin{figure}[h]
+    \centering
+    \fbox{\parbox{0.8\textwidth}{
+        \textbf{Menu Principal}\\
+        - Titre centré en haut\\
+        - Boutons de navigation au centre\\
+        - Options en bas\\
+        - Fond dynamique avec animation d'avion
+    }}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \fbox{\parbox{0.8\textwidth}{
+        \textbf{Interface de Simulation}\\
+        - Vue principale au centre\\
+        - Tableau de bord en bas\\
+        - Mini-carte en haut à droite\\
+        - Menu latéral rétractable\\
+        - Indicateurs de vol superposés
+    }}
+\end{figure}
+
+\section{Cas d'usage}
+\subsection{Scénario 1 : Vol libre}
+\begin{enumerate}
+    \item L'utilisateur lance l'application
+    \item Sélectionne "Nouveau vol"
+    \item Choisit un avion et un aéroport de départ
+    \item Effectue les procédures de décollage
+    \item Pratique les manœuvres de base
+    \item Atterrit à l'aéroport de destination
+\end{enumerate}
+
+\subsection{Scénario 2 : Mission guidée}
+\begin{enumerate}
+    \item L'utilisateur sélectionne une mission
+    \item Suit les instructions à l'écran
+    \item Accomplit les objectifs donnés
+    \item Reçoit une évaluation de sa performance
+\end{enumerate}
+
+\section{Annexe : Points techniques à considérer}
+\begin{itemize}
+    \item Optimisation des performances graphiques
+    \item Gestion de la physique en temps réel
+    \item Sauvegarde et chargement des états de simulation
+    \item Gestion des collisions et des événements
+\end{itemize}
+
+\end{document} 

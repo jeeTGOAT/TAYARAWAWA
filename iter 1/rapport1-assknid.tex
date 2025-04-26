@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{pgf-umlsd}
+\usepackage{fancyhdr}
+
+\geometry{a4paper, margin=2.5cm}
+
+% Fix the header height
+\setlength{\headheight}{16.35004pt}
+\addtolength{\topmargin}{-0.996pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=12pt]{n7.png}}
+\fancyhead[C]{Équipe KL-4}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{Simulateur d'Avion - 2025}
+
+\title{
+    \includegraphics[width=0.4\textwidth]{n7.png}\\[1cm]
+    \textbf{Rapport d'Itération 1 - Projet Simulateur d'Avion}
+}
+\author{ASSKNID Walid - Équipe KL-4}
+\date{14 Avril 2025}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Introduction}
+Ce rapport présente les activités réalisées lors de la première itération du projet de simulateur d'avion par l'équipe KL-4. Cette itération a permis de mettre en place les bases du projet et d'implémenter les premières fonctionnalités essentielles.
+
+\section{Activités réalisées}
+
+\subsection{Analyse des besoins}
+\begin{itemize}
+    \item \textbf{Analyse du document de fonctionnalités} (100\%)
+    \begin{itemize}
+        \item Lecture et compréhension des fonctionnalités attendues
+        \item Identification des fonctionnalités prioritaires pour la première itération
+    \end{itemize}
+    
+    \item \textbf{Conception initiale} (100\%)
+    \begin{itemize}
+        \item Création du diagramme de classes UML
+        \item Définition de l'architecture générale de l'application
+    \end{itemize}
+\end{itemize}
+
+\subsection{Développement}
+\begin{itemize}
+    \item \textbf{Interface utilisateur} (90\%)
+    \begin{itemize}
+        \item Création de la page d'accueil avec menu principal
+        \item Implémentation des boutons de navigation
+        \item Mise en place du système de transition entre les écrans
+    \end{itemize}
+    
+    \item \textbf{Simulation de base} (80\%)
+    \begin{itemize}
+        \item Implémentation de la classe Aircraft pour représenter les avions
+        \item Création du panneau de simulation avec affichage de l'avion
+        \item Mise en place des contrôles de base (accélération, décélération, rotation)
+        \end{itemize}
+    
+    \item \textbf{Gestion des événements} (70\%)
+    \begin{itemize}
+        \item Implémentation des écouteurs de clavier pour contrôler l'avion
+        \item Mise en place des écouteurs de souris pour la sélection d'avions
+    \end{itemize}
+\end{itemize}
+
+\subsection{Tests}
+\begin{itemize}
+    \item \textbf{Tests de base} (60\%)
+    \begin{itemize}
+        \item Vérification du bon fonctionnement du menu principal
+        \item Tests des contrôles de l'avion
+    \end{itemize}
+\end{itemize}
+
+\section{Problèmes rencontrés}
+\begin{itemize}
+    \item Difficulté à gérer correctement les transitions entre les écrans
+    \item Problèmes de performance lors du rendu des avions
+    \item Gestion des événements de clavier qui nécessite une attention particulière
+\end{itemize}
+
+\section{Prochaines étapes}
+Pour la prochaine itération, les objectifs sont :
+\begin{itemize}
+    \item Finaliser l'interface utilisateur
+    \item Améliorer la simulation avec l'ajout de nuages et d'effets météorologiques
+    \item Implémenter la gestion des collisions
+    \item Ajouter des fonctionnalités de vol planifié
+\end{itemize}
+
+\section{Conclusion}
+Cette première itération a permis de mettre en place les bases du projet et d'implémenter les fonctionnalités essentielles. Les progrès réalisés sont encourageants, mais il reste encore du travail à faire pour atteindre les objectifs fixés dans le document de fonctionnalités.
+
+\end{document} 

@@ -1,0 +1,15 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+    % Fond rose
+    \fill[pink!80!red] (0,0) rectangle (4,4);
+    
+    % Texte N7 en blanc
+    \node[text=white, font=\Huge\bfseries] at (2,2) {N7};
+    
+    % Bordure noire
+    \draw[black, very thick] (0,0) rectangle (4,4);
+\end{tikzpicture}
+\end{document} 

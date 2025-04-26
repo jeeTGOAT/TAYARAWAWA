@@ -1,0 +1,111 @@
+@startuml Simulateur d'Avion
+
+' Styles
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor White
+  ArrowColor Black
+  BorderColor Black
+}
+
+' Classes principales
+class Main {
+  +main(String[] args): void
+}
+
+class MenuPage {
+  -parentFrame: JFrame
+  -backgroundImage: Image
+  -titleY: float
+  -buttonOpacity: float
+  -animationTimer: Timer
+  -simulateButton: JButton
+  -quitButton: JButton
+  +MenuPage(JFrame parentFrame)
+  -setupAnimations(): void
+  -createButtons(): void
+  -createStyledButton(String text): JButton
+  -drawTitle(Graphics2D g2d): void
+  -updateButtonLayout(): void
+  -startSimulation(): void
+  -quitGame(): void
+}
+
+class SimulationPanel {
+  -aircraft: List<Aircraft>
+  -gameTimer: Timer
+  -selectedAircraft: Aircraft
+  +SimulationPanel()
+  +actionPerformed(ActionEvent e): void
+  -drawAircraftInfo(Graphics2D g2d): void
+}
+
+class Aircraft {
+  -x: double
+  -y: double
+  -speed: double
+  -heading: double
+  -altitude: double
+  +Aircraft(int x, int y)
+  +update(): void
+  +draw(Graphics2D g2d, boolean selected): void
+  +contains(Point p): boolean
+  +rotate(double degrees): void
+  +accelerate(): void
+  +decelerate(): void
+  +getSpeed(): double
+  +getAltitude(): double
+  +getHeading(): double
+}
+
+' Relations
+Main --> MenuPage : crée
+MenuPage --> SimulationPanel : crée
+SimulationPanel --> Aircraft : contient
+SimulationPanel --> Aircraft : sélectionne
+
+' Interfaces
+interface ActionListener {
+  +actionPerformed(ActionEvent e): void
+}
+
+interface KeyListener {
+  +keyPressed(KeyEvent e): void
+  +keyReleased(KeyEvent e): void
+  +keyTyped(KeyEvent e): void
+}
+
+interface MouseListener {
+  +mouseClicked(MouseEvent e): void
+  +mousePressed(MouseEvent e): void
+  +mouseReleased(MouseEvent e): void
+  +mouseEntered(MouseEvent e): void
+  +mouseExited(MouseEvent e): void
+}
+
+' Implémentations d'interfaces
+SimulationPanel ..|> ActionListener
+SimulationPanel ..|> KeyListener
+SimulationPanel ..|> MouseListener
+
+' Notes
+note right of Main
+  Point d'entrée de l'application
+end note
+
+note right of MenuPage
+  Interface principale du jeu
+  avec menu et boutons
+end note
+
+note right of SimulationPanel
+  Panneau principal de simulation
+  gère le rendu et les événements
+end note
+
+note right of Aircraft
+  Représente un avion dans la simulation
+  avec position, vitesse et direction
+end note
+
+@enduml 
